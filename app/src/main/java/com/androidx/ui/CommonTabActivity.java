@@ -66,6 +66,12 @@ public class CommonTabActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        start();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         unbinder.unbind();
@@ -90,7 +96,6 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页1", "消息1", "我的1"})
                 .setFragments(new Fragment[]{new One1Fragment(), new Tow1Fragment(), new Three1Fragment()})
                 .initBuild();
-        tab1.execute();
 
         tab2 = TabLayoutBar.builder()
                 .setActivity(activity)
@@ -101,7 +106,6 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页2", "消息2", "我的2"})
                 .setFragments(new Fragment[]{new OneFragment(), new TowFragment(), new ThreeFragment()})
                 .initBuild();
-        tab2.execute();
 
         tab3 = TabLayoutBar.builder()
                 .setActivity(activity)
@@ -112,7 +116,6 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页3", "消息3", "我的3"})
                 .setFragments(new Fragment[]{new OneFragment(), new TowFragment(), new ThreeFragment()})
                 .initBuild();
-        tab3.execute();
 
         tab4 = TabLayoutBar.builder()
                 .setActivity(activity)
@@ -123,7 +126,6 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页4", "消息4", "我的4"})
                 .setFragments(new Fragment[]{new OneFragment(), new TowFragment(), new ThreeFragment()})
                 .initBuild();
-        tab4.execute();
 
         tab5 = TabLayoutBar.builder()
                 .setActivity(activity)
@@ -134,7 +136,6 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页5", "消息5", "我的5"})
                 .setFragments(new Fragment[]{new OneFragment(), new TowFragment(), new ThreeFragment()})
                 .initBuild();
-        tab5.execute();
 
         tab6 = TabLayoutBar.builder()
                 .setActivity(activity)
@@ -145,7 +146,6 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页6", "消息6", "我的6"})
                 .setFragments(new Fragment[]{new OneFragment(), new TowFragment(), new ThreeFragment()})
                 .initBuild();
-        tab6.execute();
 
         tab7 = TabLayoutBar.builder()
                 .setActivity(activity)
@@ -156,7 +156,6 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页7", "消息7", "我的7"})
                 .setFragments(new Fragment[]{new OneFragment(), new TowFragment(), new ThreeFragment()})
                 .initBuild();
-        tab7.execute();
 
         tab8 = TabLayoutBar.builder()
                 .setActivity(activity)
@@ -167,6 +166,17 @@ public class CommonTabActivity extends AppCompatActivity {
                 .setTitles(new String[]{"首页8", "消息8", "我的8"})
                 .setFragments(new Fragment[]{new OneFragment(), new TowFragment(), new ThreeFragment()})
                 .initBuild();
+
+    }
+
+    private void start() {
+        tab1.execute();
+        tab2.execute();
+        tab3.execute();
+        tab4.execute();
+        tab5.execute();
+        tab6.execute();
+        tab7.execute();
         tab8.execute();
     }
 
