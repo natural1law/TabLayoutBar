@@ -11,7 +11,7 @@
 	  ...
 	  maven { url 'https://jitpack.io' }
 }
-* implementation 'com.github.natural1law:TabLayoutBar:1.0.0'
+* **implementation 'com.github.natural1law:TabLayoutBar:1.0.0'**
 
 ### 使用方式:
   直接下载源码运行即可查看效果
