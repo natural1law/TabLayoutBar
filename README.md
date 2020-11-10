@@ -7,11 +7,11 @@
   * 更多内容请参考 https://github.com/H07000223/FlycoTabLayout
   
 ### 依赖引用:
-repositories {
+* repositories {
 	  ...
 	  maven { url 'https://jitpack.io' }
 }
-implementation 'com.github.natural1law:TabLayoutBar:1.0.0'
+* implementation 'com.github.natural1law:TabLayoutBar:1.0.0'
 
 ### 使用方式:
   直接下载源码运行即可查看效果
